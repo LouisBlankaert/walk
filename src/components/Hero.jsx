@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <div className="relative min-h-screen">
+    <div className="absolute inset-0">
       {/* Video Background */}
       <div className="absolute inset-0 w-full h-full overflow-hidden">
         <video

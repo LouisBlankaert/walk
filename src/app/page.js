@@ -3,9 +3,13 @@ import ProductGrid from "@/components/ProductGrid";
 
 export default function Home() {
   return (
-    <>
-      <Hero />
-      <ProductGrid />
-    </>
+    <div className="relative">
+      <div className="h-screen sticky top-0">
+        <Hero />
+      </div>
+      <div className="relative bg-white">
+        <ProductGrid />
+      </div>
+    </div>
   );
 }
