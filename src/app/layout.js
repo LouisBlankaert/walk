@@ -1,4 +1,4 @@
-import { Inter } from "next/font/google";
+import { Permanent_Marker } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -6,9 +6,10 @@ import { CartProvider } from "@/context/CartContext";
 import CartOverlay from "@/components/CartOverlay";
 import LoadingScreen from "@/components/LoadingScreen";
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
+const marker = Permanent_Marker({
+  weight: ['400'],
+  subsets: ['latin'],
+  variable: '--font-marker',
 });
 
 export const metadata = {
@@ -19,7 +20,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="fr">
-      <body className={`${inter.variable} font-sans antialiased min-h-screen flex flex-col`}>
+      <body className={`${marker.variable} font-sans antialiased min-h-screen flex flex-col`}>
         <LoadingScreen />
         <CartProvider>
           <Navigation />

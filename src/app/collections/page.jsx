@@ -20,7 +20,7 @@ export default function CollectionsPage() {
   return (
     <div className="min-h-screen pt-24">
       <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-light mb-8">Collections</h1>
+        <h1 className="text-4xl font-roller mb-8">Collections</h1>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {allProducts.slice(0, visibleProducts).map((product) => (

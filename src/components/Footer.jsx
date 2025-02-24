@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -7,7 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Colonne 1 - Logo */}
           <div className="flex items-start">
-            <Link href="/" className="text-2xl font-bold">WALK</Link>
+            <Link href="/" className="text-2xl font-bold"><Image src="/images/nsk_logo2.png" alt="Logo" width={72} height={72} /></Link>
           </div>
 
           {/* Colonne 2 - Liens */}

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useCart } from "@/context/CartContext";
 import { useState } from "react";
+import Image from "next/image";
 
 const CartCount = () => {
   const { getCartCount } = useCart();
@@ -39,9 +40,9 @@ export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed w-full bg-white/80 backdrop-blur-md z-50 py-4">
+    <nav className="fixed w-full bg-white shadow-sm z-50 py-4">
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <Link href="/" className="text-2xl font-bold">WALK</Link>
+        <Link href="/" className="text-2xl font-roller"><Image src="/images/nsk_logo.png" alt="Logo" width={112} height={112} /></Link>
         
         {/* Menu mobile */}
         <button

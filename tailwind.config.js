@@ -11,7 +11,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-inter)'],
+        sans: ['Arial Black', 'Arial', 'sans-serif'],
+        roller: ['var(--font-marker)', 'cursive'],
       },
     },
   },

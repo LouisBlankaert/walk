@@ -15,7 +15,7 @@ export default function CartPage() {
     return (
       <div className="min-h-screen pt-24">
         <div className="container mx-auto px-4 py-16 text-center">
-          <h1 className="text-2xl mb-8">Votre panier est vide</h1>
+          <h1 className="text-2xl font-roller mb-8">Votre panier est vide</h1>
           <Link 
             href="/collections" 
             className="inline-block bg-black text-white px-8 py-3 hover:bg-gray-800 transition-colors duration-300"
@@ -30,7 +30,7 @@ export default function CartPage() {
   return (
     <div className="min-h-screen pt-24">
       <div className="container mx-auto px-4 py-8">
-        <h1 className="text-2xl mb-8">Panier</h1>
+        <h1 className="text-2xl font-roller mb-8">Panier</h1>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Liste des produits */}

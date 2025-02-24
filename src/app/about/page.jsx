@@ -18,7 +18,7 @@ export default function AboutPage() {
             />
           </div>
           <div className="flex flex-col items-start justify-center w-full h-full border border-black p-6 sm:p-8 lg:p-16 xl:p-32">
-            <h1 className="text-3xl sm:text-4xl font-bold mb-6 sm:mb-8">Notre Histoire</h1>
+            <h1 className="text-3xl sm:text-4xl font-roller mb-6 sm:mb-8">Notre Histoire</h1>
             <p className="text-sm sm:text-base mb-4">
                 Fondée en 2020 à Bruxelles, WALK est née de la passion pour la mode éthique et durable. 
                 Notre vision était simple : créer des vêtements qui allient style, confort et responsabilité 
@@ -36,7 +36,7 @@ export default function AboutPage() {
         {/* Section histoire */}
         <div className="max-w-3xl mx-auto mb-16 sm:mb-24 px-0 sm:px-8">
           <div className="space-y-8 text-gray-600">
-            <h2 className="text-base sm:text-lg font-bold">
+            <h2 className="text-base sm:text-lg font-roller">
               Notre approche de la mode est minimaliste et intemporelle. Nous créons des collections 
               limitées, privilégiant la qualité à la quantité. Chaque vêtement est pensé pour durer et 
               s'intégrer parfaitement dans une garde-robe consciente et réfléchie.
@@ -48,7 +48,7 @@ export default function AboutPage() {
               cette vision d'une mode plus responsable et plus personnelle.
             </p>
 
-            <div className="pt-6 sm:pt-8 text-xs sm:text-sm italic text-center">
+            <div className="pt-6 sm:pt-8 text-xs sm:text-sm font-roller italic text-center">
               "La vraie élégance est durable" - Notre philosophie depuis 2020
             </div>
           </div>
