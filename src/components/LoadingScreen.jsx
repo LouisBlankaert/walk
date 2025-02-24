@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 export default function LoadingScreen() {
   const [progress, setProgress] = useState(0);
@@ -60,7 +61,7 @@ export default function LoadingScreen() {
 
           {/* Logo ou texte */}
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-3xl font-light">
-            WALK
+            <Image src="/images/nsk_logo2.png" alt="Logo" width={100} height={100} />
           </div>
         </div>
       </div>
