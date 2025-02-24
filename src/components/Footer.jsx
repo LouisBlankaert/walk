@@ -45,7 +45,7 @@ export default function Footer() {
               </svg>
             </a>
             <a 
-              href="https://instagram.com" 
+              href="https://www.instagram.com/noskinkolor/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-gray-600 hover:text-black"
