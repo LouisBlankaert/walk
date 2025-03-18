@@ -1,9 +1,16 @@
 import sgMail from '@sendgrid/mail';
 
-if (!process.env.SENDGRID_API_KEY) {
-  throw new Error('Missing SendGrid API key');
-}
+const initSendGrid = () => {
+  if (process.env.SENDGRID_API_KEY) {
+    if (!process.env.SENDGRID_API_KEY.startsWith('SG.')) {
+      console.warn('Warning: SendGrid API key format appears incorrect');
+    }
+    sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+  } else {
+    console.warn('SendGrid API key not found in environment variables');
+  }
+};
 
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+initSendGrid();
 
 export { sgMail };
