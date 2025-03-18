@@ -1,9 +1,10 @@
 import { stripe } from '@/lib/stripe';
 import { getServerSession } from 'next-auth';
+import { authOptions } from '../../auth/[...nextauth]/route';
 
 export async function GET(req) {
   // Vérifier l'authentification
-  const session = await getServerSession();
+  const session = await getServerSession(authOptions);
   if (!session) {
     return new Response('Unauthorized', { status: 401 });
   }
