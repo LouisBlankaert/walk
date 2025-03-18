@@ -9,11 +9,11 @@ export function CartProvider({ children }) {
   const [isLoading, setIsLoading] = useState(true);
   const [isMiniCartOpen, setIsMiniCartOpen] = useState(false);
 
-  // Fermer le mini-panier après 3 secondes
+  // Fermer le mini-panier après 5 secondes
   useEffect(() => {
     let timeout;
     if (isMiniCartOpen) {
-      timeout = setTimeout(() => setIsMiniCartOpen(false), 3000);
+      timeout = setTimeout(() => setIsMiniCartOpen(false), 5000);
     }
     return () => clearTimeout(timeout);
   }, [isMiniCartOpen]);

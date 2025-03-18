@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { loadStripe } from '@stripe/stripe-js';
 import { useCart } from '@/context/CartContext';
 
 export default function CartPage() {
@@ -10,6 +11,33 @@ export default function CartPage() {
   const subtotal = getCartTotal();
   const shipping = 0; // Frais de livraison gratuits
   const total = subtotal + shipping;
+
+  const handleCheckout = async () => {
+    try {
+      // Track analytics
+      await fetch('/api/analytics', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          type: 'purchase',
+          data: { products: cart }
+        })
+      });
+
+      // Create Stripe checkout session
+      const response = await fetch('/api/checkout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ items: cart })
+      });
+
+      const { sessionId } = await response.json();
+      const stripe = await loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY);
+      await stripe.redirectToCheckout({ sessionId });
+    } catch (error) {
+      console.error('Error during checkout:', error);
+    }
+  };
 
   if (cart.length === 0) {
     return (
@@ -107,7 +135,10 @@ export default function CartPage() {
                 </div>
               </div>
 
-              <button className="w-full bg-black text-white py-3 mt-6 hover:bg-gray-800 transition-colors duration-300">
+              <button 
+                onClick={handleCheckout}
+                className="w-full bg-black text-white py-3 mt-6 hover:bg-gray-800 transition-colors duration-300"
+              >
                 Passer la commande
               </button>
 

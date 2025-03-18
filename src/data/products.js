@@ -48,35 +48,5 @@ export const products = [
     images: ["/images/hat.png", "/images/hat.png", "/images/hat.png"],
     sizes: ["XS", "S", "M", "L", "XL"],
     details: ["Fabriqué en Belgique"]
-  },
-  {
-    id: 6,
-    title: "Jean Droit",
-    price: 190,
-    image: "/images/hat.png",
-    description: "Description détaillée du produit à venir.",
-    images: ["/images/hat.png", "/images/hat.png", "/images/hat.png"],
-    sizes: ["XS", "S", "M", "L", "XL"],
-    details: ["Fabriqué en Belgique"]
-  },
-  {
-    id: 7,
-    title: "Bonnet",
-    price: 45,
-    image: "/images/hat.png",
-    description: "Description détaillée du produit à venir.",
-    images: ["/images/hat.png", "/images/hat.png", "/images/hat.png"],
-    sizes: ["XS", "S", "M", "L", "XL"],
-    details: ["Fabriqué en Belgique"]
-  },
-  {
-    id: 8,
-    title: "Écharpe",
-    price: 65,
-    image: "/images/hat.png",
-    description: "Description détaillée du produit à venir.",
-    images: ["/images/hat.png", "/images/hat.png", "/images/hat.png"],
-    sizes: ["XS", "S", "M", "L", "XL"],
-    details: ["Fabriqué en Belgique"]
   }
 ];
